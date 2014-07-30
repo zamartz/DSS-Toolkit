@@ -5,12 +5,13 @@ Digital Social Squear Toolkit - HTML, SASS Framework, Complied min.css
 
 DSSI-Toolkit Examples:
 
--- Social Coloring --
+##-- Social Coloring --
+
 .si-txt-base = Text set to Social Base Color (default white)
 
 .si-txt-{social-abrv} = Text Social Color
 
--- Social Background Image --
+##-- Social Background Image --
 
 .si-bg-third = Sets background image as ⅓ size
 
@@ -18,7 +19,7 @@ DSSI-Toolkit Examples:
 
 .si-bg-full = Sets background image as full size
 
--- Background Color Settings and Block Size --
+##-- Background Color Settings and Block Size --
 
 .si-bg-{social-abrv} = Background Color based on Social Brand Color
 
@@ -34,7 +35,7 @@ DSSI-Toolkit Examples:
 
 .si-bg-{social-abrv}-color-full = full size (coloring same as ½ color)
 
--- Extra --
+##-- Extra --
 
 .row-clear = will end line of icons and push following below
 
