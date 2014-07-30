@@ -1,0 +1,144 @@
+//Main Social Grid Sizes
+$set_social_box_max: $set_grid_size * 2; // If set will create 3 sizes off max ~ full-size, half-size, third-size
+/*set social box max size " #{$set_social_box_max} "*/
+$set_manual_three:false; //To use three manual sizes set to "Ture" and add sizes
+$set_manual_full:200; // Largest Size in Pixels
+$set_manual_half:100; // Middle Size in Pixels
+$set_manual_third:50; // Smallest Size in Pixels
+
+$hover-flip:true; // sets reverse image on hover
+
+/* if active can set 3 block sizes " #{$set_manual_three} "*/
+
+// Additional Social Settings
+
+// Social Grid Background Image
+ $si-bg-url : "https://dl.dropboxusercontent.com/s/kevf984tomshr9d/Social-Square-Icon-Double.png";
+
+// Social Grid Size Compilation
+ $si-third : $set_social_box_max / 3;
+ $si-half : $set_social_box_max / 2;
+ $si-full : $set_social_box_max;
+
+ @if $set_manual_three {
+    $si-third : $set_manual_third;
+    $si-half : $set_manual_half;
+    $si-full : $set_manual_full;
+ }
+
+// the Social Grid Standard CSS
+.social-item {
+  display:block;
+  float:left;
+  background: url("#{$si-bg-url}");
+  background-origin:border-box;
+  color:#fff;
+}
+
+.social-item span,.social-item span span {display:none;}
+
+.social-item:link{text-decoration:none;}
+
+.social-item:hover{text-decoration:underline;}
+
+.si-txt{margin:5px}
+
+.row-clear{clear:both;}
+
+.si-bg-third{
+  width: #{$si-third}px;
+  height: #{$si-third}px;
+  background-size: #{$si-third*2}px auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+ 
+.si-bg-half{
+  width: #{$si-half}px; height:#{$si-half}px;
+  background-size: #{$si-half*2}px auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+ 
+.si-bg-full{
+   width: #{$si-full}px; height:#{$si-full}px;
+  background-size:#{$si-full*2}px auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Social Grid Background Colors
+ $social-bg-base:#fff;
+ $facebook-color:#3b5998;
+ $twitter-color:#55acee;
+ $tumblr-color:#35465c;
+ $linkedin-color:#0976b4;
+ $pinterest-color:#cc2127;
+ $googleplus-color:#dd4b39;
+ $behance-color:#1769ff;
+ $instagram-color:#3f729b;
+ $flickr-color:#333;
+ $youtube-color:#cd201f;
+ $vimeo-color:#1ab7ea;
+ $spotify-color:#690;
+ $lastfm-color:#c3000d;
+ $grooveshark-color:#f86f09;
+ $evernote-color:#7ac142;
+ $buffer-color:#202326;
+ $delicious-color:#39f;
+ $foursquare-color:#f36;
+ $github-color:#f93;
+ $rss-color:#f26522;
+ $dropbox-color:#007ee5;
+ $email-color:#abc;
+
+.si-txt-base,.si-txt-base:link{color:#{$social-bg-base};}
+
+// Social Grid Item Compiler
+@mixin social-grid-item($social-name,$social-number,$social-color){
+    .si-txt-#{$social-name}:link{color:#{$social-color};}
+    .si-bg-#{$social-name} {background-color:#{$social-color};}
+    .si-bg-#{$social-name}-third{background-position: left #{$si-third * $social-number}px; background-color:#{$social-color};}
+    .si-bg-#{$social-name}-half{background-position: left #{$si-half * $social-number}px; background-color:#{$social-color};}
+    .si-bg-#{$social-name}-full{background-position: left #{$si-full * $social-number}px; background-color:#{$social-color};}
+     @if $hover-flip {
+      .si-bg-#{$social-name}-third:hover{background-position: right #{$si-third * $social-number}px; background-color:#{$social-bg-base}; }
+      .si-bg-#{$social-name}-half:hover{background-position: right #{$si-half * $social-number}px; background-color:#{$social-bg-base};}
+      .si-bg-#{$social-name}-full:hover{background-position: right #{$si-full * $social-number}px; background-color:#{$social-bg-base};}
+     }
+    .si-bg-#{$social-name}-color-third{background-position: right #{$si-third * $social-number}px; background-color:#{$social-bg-base};}
+    .si-bg-#{$social-name}-color-half{background-position: right #{$si-half * $social-number}px; background-color:#{$social-bg-base};}
+    .si-bg-#{$social-name}-color-full{background-position: right #{$si-full * $social-number}px; background-color:#{$social-bg-base};}
+     @if $hover-flip {
+      .si-bg-#{$social-name}-color-third:hover{background-position: left #{$si-third * $social-number}px; background-color:#{$social-color};}
+      .si-bg-#{$social-name}-color-half:hover{background-position: left #{$si-half * $social-number}px; background-color:#{$social-color};}
+      .si-bg-#{$social-name}-color-full:hover{background-position: left #{$si-full * $social-number}px; background-color:#{$social-color};}
+     }
+  }
+ 
+ // Social Grid Maps
+ @include social-grid-item("fb",1,$facebook-color);
+ @include social-grid-item("tw",2,$twitter-color);
+ @include social-grid-item("tu",3,$tumblr-color);
+ @include social-grid-item("in",4,$linkedin-color);
+ @include social-grid-item("pin",5,$pinterest-color);
+ @include social-grid-item("gp",6,$googleplus-color);
+ @include social-grid-item("be",7,$behance-color);
+ @include social-grid-item("inst",8,$instagram-color);
+ @include social-grid-item("fkr",9,$flickr-color);
+ @include social-grid-item("you",10,$youtube-color);
+ @include social-grid-item("vi",11,$vimeo-color);
+ @include social-grid-item("spot",12,$spotify-color);
+ @include social-grid-item("fm",13,$lastfm-color);
+ @include social-grid-item("gs",14,$grooveshark-color);
+ @include social-grid-item("en",15,$evernote-color);
+ @include social-grid-item("buff",16,$buffer-color);
+ @include social-grid-item("del",17,$delicious-color); 
+ @include social-grid-item("frsq",18,$foursquare-color);
+ @include social-grid-item("git",19,$github-color);
+ @include social-grid-item("rss",20,$rss-color);
+ @include social-grid-item("db",21,$dropbox-color);
+ @include social-grid-item("em",22,$email-color);
