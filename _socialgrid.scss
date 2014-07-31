@@ -1,5 +1,5 @@
 //Main Social Grid Sizes
-$set_social_box_max: $set_grid_size * 2; // If set will create 3 sizes off max ~ full-size, half-size, third-size
+$set_social_box_max: 200; // If set will create 3 sizes off max ~ full-size, half-size, third-size
 /*set social box max size " #{$set_social_box_max} "*/
 $set_manual_three:false; //To use three manual sizes set to "Ture" and add sizes
 $set_manual_full:200; // Largest Size in Pixels
