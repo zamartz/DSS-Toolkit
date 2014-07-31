@@ -1,9 +1,9 @@
-DSSI-Toolkit
+DSS-Toolkit
 ============
 
-Digital Social Squear Toolkit - HTML, SASS Framework, Complied min.css
+Digital Social Square : Toolkit - HTML, SASS Framework, Complied min.css
 
-DSSI-Toolkit Examples:
+DSS : Toolkit Examples:
 
 ##-- Social Coloring --
 
