@@ -1,3 +1,6 @@
+/*override for demo page */
+#social-container table .social-item{float: none !important;}#social-container a:visited{ color:#ddd;}#social-container th {min-width:130px;background-color:#bbb;}#social-container table,#social-container th,#social-container tr,#social-container td{border:1px solid #ddd;border-collapse: collapse;text-align:center;verticle-align:middle;padding:10px;}#social-container table a{margin: 0px auto;} 
+
 //Main Social Grid Sizes
 $set_social_box_max: 200; // If set will create 3 sizes off max ~ full-size, half-size, third-size
 /*set social box max size " #{$set_social_box_max} "*/
@@ -16,7 +19,7 @@ $hover-flip:true; // sets reverse image on hover
  $si-bg-url : "https://dl.dropboxusercontent.com/s/kevf984tomshr9d/Social-Square-Icon-Double.png";
 
 // Social Grid Size Compilation
- $si-third : $set_social_box_max / 3;
+ $si-third : floor($set_social_box_max / 3); 
  $si-half : $set_social_box_max / 2;
  $si-full : $set_social_box_max;
 
@@ -89,7 +92,7 @@ $hover-flip:true; // sets reverse image on hover
  $evernote-color:#7ac142;
  $buffer-color:#202326;
  $delicious-color:#39f;
- $foursquare-color:#f36;
+ $foursquare-color:#F94877;
  $github-color:#f93;
  $rss-color:#f26522;
  $dropbox-color:#007ee5;
