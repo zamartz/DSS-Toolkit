@@ -16,7 +16,7 @@ $hover-flip:true; // sets reverse image on hover
 // Additional Social Settings
 
 // Social Grid Background Image
- $si-bg-url : "https://dl.dropboxusercontent.com/s/kevf984tomshr9d/Social-Square-Icon-Double.png";
+ $si-bg-url : "https://dl.dropboxusercontent.com/s/egvzop1sb7i1yv7/Social-Square-Icons-Double.png";
 
 // Social Grid Size Compilation
  $si-third : floor($set_social_box_max / 3); 
@@ -97,6 +97,7 @@ $hover-flip:true; // sets reverse image on hover
  $rss-color:#f26522;
  $dropbox-color:#007ee5;
  $email-color:#abc;
+ $feedly-color:#6cc655;
 
 .si-txt-base,.si-txt-base:link{color:#{$social-bg-base};}
 
@@ -145,3 +146,4 @@ $hover-flip:true; // sets reverse image on hover
  @include social-grid-item("rss",20,$rss-color);
  @include social-grid-item("db",21,$dropbox-color);
  @include social-grid-item("em",22,$email-color);
+@include social-grid-item("feedly",23,$feedly-color);
